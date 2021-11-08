@@ -2,7 +2,10 @@ body {
   background-color: #282c34;
 }
 .container {
-  color: rgb(99, 94, 94);
+  color: rgb(126, 125, 125);
   text-align: center;
   margin-top: 24%;
+}
+.textContainer {
+  color: #abb4b6;
 }
