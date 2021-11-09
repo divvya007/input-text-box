@@ -2,10 +2,19 @@ import { useState } from "react";
 import "./style.css";
 
 function InputBox() {
-  const [text, setText] = useState();
+  const [text, setText] = useState("hi");
 
   function handleInputTextBoxChange(e) {
     return setText(e.target.value);
+  }
+
+  function doubleString(input) {
+    let array = [];
+    const inputText = input.split(" ");
+    inputText.map((element) => {
+      array.push(element + " " + element + " ");
+    });
+    return array.join(" ");
   }
 
   return (
@@ -13,13 +22,9 @@ function InputBox() {
       <div className="container">
         <label>
           write something:{" "}
-          <input
-            value={text}
-            onChange={handleInputTextBoxChange}
-            // onChange={(e) => setText(e.target.value)}
-          />
+          <input value={text} onChange={handleInputTextBoxChange} />
         </label>
-        <p className="textContainer">{text}</p>
+        <p className="textContainer">{doubleString(text)}</p>
       </div>
     </>
   );
