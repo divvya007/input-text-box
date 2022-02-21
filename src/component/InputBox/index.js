@@ -21,7 +21,7 @@ function InputBox() {
     <>
       <div className="container">
         <label>
-          write something:{" "}
+          write something:
           <input value={text} onChange={handleInputTextBoxChange} />
         </label>
         <p className="textContainer">{doubleString(text)}</p>
